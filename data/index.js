@@ -15,7 +15,7 @@ export const jobs = [
     ],
   },
   {
-    year: "2021",
+    year: "2020",
     title: "Cohort Coach, Software Engineering",
     company: "The Flatiron School",
     body: [
@@ -35,11 +35,12 @@ export const jobs = [
   },
   {
     year: "2019-2020",
-    title: "Writer, IMPACT Conference 2019-20",
-    company: "Sans Serif",
+    title: "Communications Consultant",
+    company: "Clean Fuels Development Coalition",
     body: [
-      "Wrote and reviewed materials for Charles Schwab’s IMPACT Conference to ensure quality and clarity",
-      "Created guide materials clarifying workshops and speaker biographies for thousands of conference attendees",
+      "Collaboratively developed long-term media strategies and handled media outreach for a national ad campaign",
+      "Oversaw social media campaigns that generated over 50,000 new engagements",
+      "Collaborated on campaigns resulting in core messages appearing in Forbes, The Hill and the Des Moines Register",
     ],
   },
 ];

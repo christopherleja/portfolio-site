@@ -20,8 +20,8 @@ export const Header = () => {
           className="header-bg-video"
         />
         {/* <div className="w-full bg-transparent text-center"> */}
-        <h1 className="h1 text-almond">Christopher Leja</h1>
-        <h4 className="h4 text-green-200">Software Engineer</h4>
+        <h1 className="text-almond h1">Christopher Leja</h1>
+        <h3 className="text-green-200 h3">Software Engineer</h3>
         {/* </div> */}
       </div>
     </div>

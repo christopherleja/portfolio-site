@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         almond: "blanchedalmond",
+        appPurple: "#4b2b50",
       },
       zIndex: {
         "-1": "-1",
