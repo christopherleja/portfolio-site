@@ -1,13 +1,23 @@
 .h1 {
-  @apply text-4xl uppercase text-center mb-16;
+  @apply text-5xl sm:text-4xl uppercase text-center mb-16;
 }
 
 .h2 {
+  @apply text-2xl uppercase text-center;
 }
 
 .h3 {
+  @apply text-xl uppercase text-center;
 }
 
 .h4 {
-  @apply text-lg uppercase text-center;
+  @apply text-lg text-center;
+}
+
+.h5 {
+  @apply text-center uppercase;
+}
+
+p {
+  @apply py-2;
 }
