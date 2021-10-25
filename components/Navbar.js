@@ -8,12 +8,8 @@ const Navbar = () => {
       link: "#home",
     },
     {
-      text: "Work",
-      link: "#work",
-    },
-    {
       text: "Projects",
-      link: "#personal-projects",
+      link: "#projects",
     },
     {
       text: "Resume",
@@ -29,7 +25,10 @@ const Navbar = () => {
     <div className="fixed top-0 h-24 z-10 w-screen flex justify-evenly items-center uppercase bg-black bg-opacity-80">
       {navArr.map((item, i) => {
         return (
-          <li key={i} className="list-none text-green-200 text-sm sm:text-lg">
+          <li
+            key={i}
+            className="list-none text-blueLight hover:text-blueDark text-sm sm:text-lg"
+          >
             <Link href={item.link}>{item.text}</Link>
           </li>
         );

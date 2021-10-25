@@ -21,7 +21,7 @@ export const Header = () => {
         />
         {/* <div className="w-full bg-transparent text-center"> */}
         <h1 className="text-almond h1">Christopher Leja</h1>
-        <h3 className="text-green-200 h3">Software Engineer</h3>
+        <h3 className="text-blueLight h3">Software Engineer</h3>
         {/* </div> */}
       </div>
     </div>

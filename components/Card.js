@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import ClosedCard from "./ClosedCard";
-import RichText from "@madebyconnor/rich-text-to-jsx";
+import RichText from "./RichText";
 import CardLink from "./CardLink";
 
 const Card = ({
@@ -25,7 +25,7 @@ const Card = ({
         <div className="w-full flex flex-col center-content lg:flex-row p-4"></div>
         <div className="flex flex-col lg:flex-row xl:justify-around">
           <div className="about-article-col-2 w-full lg:w-1/2 xl:w-2/5 pb-4 lg:pb-0 about-card-body">
-            <RichText richText={body} />
+            <RichText text={body} />
             <div className="flex justify-between flex-wrap">
               <CardLink title={"Live"} link={liveDemo} />
               <CardLink title={"Video"} link={video} />

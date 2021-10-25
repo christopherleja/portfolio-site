@@ -6,8 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        almond: "blanchedalmond",
-        appPurple: "#4b2b50",
+        almond: "#E8DAB2",
+        appPurple: "#3e1c44",
+        sienna: "#DD6E42",
+        blueDark: "#4F6D7A",
+        blueLight: "#C0D6DF",
+        grayLight: "#EAEAEA",
       },
       zIndex: {
         "-1": "-1",

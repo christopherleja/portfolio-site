@@ -1,25 +1,23 @@
 import React from "react";
 import Card from "./Card";
+import DetailModal from "./DetailModal";
+import NewCard from "./NewCard";
 
 const MyWorkContainer = ({ projects }) => {
   return (
-    <div id="work" className="w-full flex flex-col">
-      <h1 className="text-appPurple my-8 h1">Work</h1>
-      {projects.map((proj) => {
-        const { title, body, image, url, subtitle } = proj.fields;
-
-        return (
-          <Card
-            key={title}
-            title={title}
-            subtitle={subtitle}
-            body={body}
-            image={image}
-            publishedLink={url}
-            dark
-          />
-        );
-      })}
+    <div
+      id="projects"
+      className="w-full 2xl:w-4/5 mx-auto flex flex-col relative"
+    >
+      <div className="my-8">
+        <h1 className="text-blueDark h1">Projects</h1>
+        <div className="flex flex-wrap">
+          {projects.map((proj, i) => {
+            return <NewCard key={i} project={proj} />;
+          })}
+        </div>
+      </div>
+      <DetailModal />
     </div>
   );
 };
