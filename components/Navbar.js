@@ -7,10 +7,6 @@ const Navbar = () => {
       text: "Home",
       link: "#home",
     },
-    // {
-    //   text: "Work",
-    //   link: "#work",
-    // },
     {
       text: "Projects",
       link: "#projects",
