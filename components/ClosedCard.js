@@ -1,7 +1,7 @@
 import React from "react";
 
 const ClosedCard = ({ title, subtitle, open, setOpen, dark }) => {
-  const textColor = dark ? "text-appPurple" : "text-almond";
+  const textColor = dark ? "text-blueDark" : "text-almond";
 
   return (
     <div

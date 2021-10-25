@@ -1,5 +1,5 @@
 .h1 {
-  @apply text-5xl sm:text-4xl uppercase text-center mb-16;
+  @apply text-5xl sm:text-4xl uppercase text-center mb-16 font-semibold;
 }
 
 .h2 {
@@ -21,3 +21,7 @@
 p {
   @apply py-2;
 }
+
+// .app-header {
+//   @apply text-7xl font-semibold;
+// }

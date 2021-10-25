@@ -1,0 +1,115 @@
+// // $resumeBlue: #6292bc;
+// $resumeBlue: lightcoral;
+
+// .resume {
+//   &-container {
+//     width: 100%;
+//     padding: 2.5rem;
+//     margin-top: 2.5rem;
+//     // z-index: -1;
+//     position: relative;
+//     // @apply bg-opacity-10 bg-white rounded-md;
+//   }
+
+//   &-timeline {
+//     position: relative;
+//     padding: 1rem;
+//     margin: 0 auto;
+//     // z-index: -1;
+//     @apply md:p-8;
+
+//     &:before {
+//       @apply md:left-1/2 md:right-auto;
+//       content: "";
+//       position: absolute;
+//       margin-top: 8rem;
+//       height: 90%;
+//       border-left: 1px solid $resumeBlue;
+//       right: 40px;
+//       top: 0;
+//     }
+//     &:after {
+//       content: "";
+//       display: table;
+//       clear: both;
+//     }
+
+//     // Timeline ITEM
+//     &-item {
+//       padding: 1rem;
+//       border-bottom: 2px solid $resumeBlue;
+//       position: relative;
+//       margin: 1rem 3rem 1rem 1rem;
+//       clear: both;
+//       &:after {
+//         content: "";
+//         position: absolute;
+//       }
+//       &:before {
+//         content: "";
+//         position: absolute;
+//         right: -0.625rem;
+//         top: calc(50% - 5px);
+//         border-style: solid;
+//         border-color: $resumeBlue $resumeBlue transparent transparent;
+//         border-width: 0.625rem;
+//         transform: rotate(45deg);
+//       }
+
+//       @media (min-width: 768px) {
+//         width: 44%;
+//         margin: 1rem;
+//         &:nth-of-type(2n) {
+//           float: right;
+//           margin: 1rem;
+//         }
+//         &:nth-of-type(2n):before {
+//           right: auto;
+//           left: -0.625rem;
+//           border-color: transparent transparent $resumeBlue $resumeBlue;
+//         }
+//       }
+//     }
+
+//     // TIMELINE YEAR
+//     &-year {
+//       text-align: center;
+//       max-width: 9.375rem;
+//       margin: 0 3rem 0 auto;
+//       font-size: 1.8rem;
+//       border-radius: 5px;
+//       // background: #382633;
+//       color: $resumeBlue;
+//       line-height: 1;
+//       padding: 0.5rem 0 1rem;
+//       &:before {
+//         display: "none";
+//       }
+//       @media (min-width: 768px) {
+//         text-align: center;
+//         margin: 0 auto;
+//         &:nth-of-type(2n) {
+//           float: "none";
+//           margin: "0 auto";
+//         }
+//         &:nth-of-type(2n):before {
+//           display: "none";
+//         }
+//       }
+//     }
+//   }
+// }
+
+.resume {
+  &-container {
+    @apply bg-white bg-opacity-50 lg:w-4/5 border-2 border-sienna mx-auto mt-8 p-8 lg:px-8;
+  }
+
+  &-title {
+    @apply text-blueDark font-semibold md:pt-2 md:border-b-2 md:border-sienna md:text-lg text-center uppercase;
+  }
+
+  &-company-title {
+    @apply text-lg;
+  }
+}

@@ -1,48 +1,62 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
 import { NextSeo } from "next-seo";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import client from "../lib/contentful";
-import PersonalProjectsContainer from "../components/PersonalProjectsContainer";
 import MyWorkContainer from "../components/MyWorkContainer";
 import Resume from "../components/Resume";
+import About from "../components/About";
+import AppContext from "../context";
+import DetailModal from "../components/DetailModal";
+import Footer from "../components/Footer";
 
-export default function Home({ bio, personalProjects, workProjects, resume }) {
+export default function Home({ bio, projects, resume }) {
+  const [selected, setSelected] = useState(null);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const modalValues = {
+    selected,
+    setSelected,
+    modalVisible,
+    setModalVisible,
+  };
+
   return (
-    <div className="bg-black justify-center flex flex-col">
-      <NextSeo
-        title="Christopher Leja"
-        description="Christopher Leja, fullstack software engineer"
-      />
-      <Navbar />
-      <Header />
-      <div className="projects-bg-gradient px-10">
-        <MyWorkContainer projects={workProjects} />
-        <PersonalProjectsContainer projects={personalProjects} />
-        <Resume resume={resume} />
+    <AppContext.Provider value={modalValues}>
+      <div
+        className={`justify-center flex flex-col`}
+        onClick={() => {
+          modalVisible ? setModalVisible(false) : null;
+        }}
+      >
+        <NextSeo
+          title="Christopher Leja"
+          description="Christopher Leja, Fullstack Software Engineer experienced in JavaScript, Ruby, and mobile frameworks"
+        />
+        <Navbar />
+        <Header />
+        <div className="px-10">
+          <About />
+          <MyWorkContainer projects={projects} />
+          <Resume resume={resume} />
+        </div>
+        <Footer />
       </div>
-    </div>
+    </AppContext.Provider>
   );
 }
 
 export async function getStaticProps() {
   let bio = await client.getEntries({ content_type: "bio" });
-  bio = bio.items[0].fields;
+  bio = bio?.items?.[0]?.fields;
 
-  let personalProjects = await client.getEntries({
-    content_type: "personalProjects",
+  let projects = await client.getEntries({
+    content_type: "projects",
   });
 
-  personalProjects = personalProjects.items.sort(
-    (a, b) => b.fields.order - a.fields.order
-  );
-
-  let workProjects = await client.getEntries({
-    content_type: "professionalProjects",
-  });
-
-  workProjects = workProjects.items.sort((a, b) => a.order - b.order);
+  projects = projects.items.sort((a, b) => b?.fields?.order - a?.fields?.order);
 
   let resume = await client.getEntries({
     content_type: "resume",
@@ -51,8 +65,7 @@ export async function getStaticProps() {
   return {
     props: {
       bio,
-      personalProjects,
-      workProjects,
+      projects,
       resume,
     },
   };

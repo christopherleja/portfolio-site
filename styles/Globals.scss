@@ -1,6 +1,8 @@
 html,
 body {
-  background-image: linear-gradient(#cbc3af, #587c99, #3e1c44);
+  // background-image: linear-gradient(#cbc3af, #587c99, #3e1c44);
+  @apply bg-grayLight;
   background-repeat: no-repeat;
   background-size: auto;
+  z-index: -2;
 }
