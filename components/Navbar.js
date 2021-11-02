@@ -22,17 +22,24 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="fixed top-0 h-24 z-10 w-screen flex justify-evenly items-center uppercase bg-black bg-opacity-80">
-      {navArr.map((item, i) => {
-        return (
-          <li
-            key={i}
-            className="list-none text-blueLight hover:text-blueDark text-sm sm:text-lg"
-          >
-            <Link href={item.link}>{item.text}</Link>
-          </li>
-        );
-      })}
+    <div className="fixed top-0 h-20 z-20 w-screen flex justify-evenly items-center uppercase bg-black bg-opacity-90">
+      <div className="w-0 md:w-1/2">
+        <h4 className="h4 text-sienna md:ml-12 float-left hidden md:block">
+          Christopher Leja
+        </h4>
+      </div>
+      <div className="w-full md:w-1/2 justify-evenly flex ">
+        {navArr.map((item, i) => {
+          return (
+            <li
+              key={i}
+              className="list-none text-blueLight hover:text-blueDark"
+            >
+              <Link href={item.link}>{item.text}</Link>
+            </li>
+          );
+        })}
+      </div>
     </div>
   );
 };
