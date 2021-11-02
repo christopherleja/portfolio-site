@@ -32,8 +32,8 @@ const NewCard = ({ project }) => {
           alt={title}
         />
         <div className="bg-blueDark p-4">
-          <h2 className="h3 text-almond">{title}</h2>
-          <h5 className="h5 text-sm text-blueLight">{subtitle}</h5>
+          <h2 className="h3 text-almond font-semibold">{title}</h2>
+          <h5 className="h5 text-sm text-grayLight">{subtitle}</h5>
         </div>
       </div>
     </div>

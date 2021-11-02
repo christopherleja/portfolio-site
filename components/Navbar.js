@@ -28,7 +28,7 @@ const Navbar = () => {
           Christopher Leja
         </h4>
       </div>
-      <div className="w-full md:w-1/2 justify-evenly flex ">
+      <ul className="w-full md:w-1/2 justify-evenly flex ">
         {navArr.map((item, i) => {
           return (
             <li
@@ -39,7 +39,7 @@ const Navbar = () => {
             </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
 };

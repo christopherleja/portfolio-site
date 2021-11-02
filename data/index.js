@@ -70,7 +70,7 @@ export const jobs = [
 
 export const ed = [
   {
-    year: "2019",
+    year: "2020",
     title: "Software Engineering",
     company: "The Flatiron School",
   },
@@ -165,15 +165,36 @@ export const workingKnowledge = [
 
 export const socials = [
   {
-    icon: <SiLinkedin size={30} color={blueDark} className="social-icon" />,
+    icon: (
+      <SiLinkedin
+        size={30}
+        title="LinkedIn"
+        color={blueDark}
+        className="social-icon"
+      />
+    ),
     link: "https://www.linkedin.com/in/christopherleja/",
   },
   {
-    icon: <SiGithub size={30} color={blueDark} className="social-icon" />,
+    icon: (
+      <SiGithub
+        size={30}
+        title="Github"
+        color={blueDark}
+        className="social-icon"
+      />
+    ),
     link: "https://github.com/christopherleja",
   },
   {
-    icon: <BiEnvelope size={30} color={blueDark} className="social-icon" />,
+    icon: (
+      <BiEnvelope
+        size={30}
+        title="Email"
+        color={blueDark}
+        className="social-icon"
+      />
+    ),
     link: "mailto:christopher.leja@gmail.com",
   },
 ];

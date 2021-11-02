@@ -24,7 +24,11 @@ const DetailModal = () => {
           <div className="project-modal p-8">
             <h1 className="h1 mb-8 text-blueDark">{selected.title}</h1>
             {selected.url && (
-              <CardLink title="Visit" link={selected.url} fullWidth />
+              <CardLink
+                title={`Visit ${selected.title}`}
+                link={selected.url}
+                fullWidth
+              />
             )}
             <div className="flex flex-col lg:flex-row">
               <div className="w-full lg:w-1/3 p-8">

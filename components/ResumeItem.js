@@ -10,14 +10,16 @@ const ResumeItem = ({ job }) => {
         </div>
         <div className="flex flex-col ">
           <h4 className="resume-title">{job.title}</h4>
-          <p className="text-right md:align-middle text-sienna">{job.year}</p>
+          <p className="text-right md:align-middle text-sienna font-semibold">
+            {job.year}
+          </p>
         </div>
       </div>
 
       <ul className="list-disc px-4">
         {job?.body?.map((b, i) => {
           return (
-            <li key={i} className="py-1 pl-4 list-inside text-blueDark">
+            <li key={i} className="py-1 pl-4 list-inside">
               {b}
             </li>
           );

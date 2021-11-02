@@ -12,8 +12,8 @@ const About = () => {
       className="md:w-4/5 border-sienna border-2 mx-auto p-8 my-8"
     >
       <h1 className="h1 text-sienna w-full mb-4">Christopher Leja</h1>
-      <h2 className="h2 text-blueDark mb-4">Software Engineer</h2>
-      <div className="w-1/2 mx-auto">
+      <h2 className="h2 text-blueDark font-semibold mb-4">Software Engineer</h2>
+      <div className="w-2/3 sm:w-1/2 mx-auto">
         <Contact />
       </div>
       <div className="flex flex-col lg:flex-row justify-between">
@@ -28,7 +28,7 @@ const About = () => {
             alt="Christopher Leja"
           />
         </div>
-        <div className="w-full lg:w-3/4 p-8 my-4 mx-auto border-blueLight border-2">
+        <div className="w-full lg:w-3/4 p-4 sm:p-8 my-4 mx-auto border-blueLight border-2">
           {bio.map((p, i) => (
             <p key={i}>{p}</p>
           ))}

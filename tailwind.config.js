@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        almond: "#E8DAB2",
+        almond: "#f3e8c8",
         appPurple: "#3e1c44",
-        sienna: "#DD6E42",
+        sienna: "#C34609",
         blueDark: "#4F6D7A",
         blueLight: "#C0D6DF",
         grayLight: "#EAEAEA",

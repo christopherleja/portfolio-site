@@ -16,6 +16,7 @@ const Resume = ({ resume }) => {
           target="_blank"
           rel="noreferrer"
           className="bg-blueDark p-4 rounded-md text-grayLight hover:opacity-80"
+          aria-label="Download resumé"
         >
           Download
         </a>
